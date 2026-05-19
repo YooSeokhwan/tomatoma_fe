@@ -11,6 +11,7 @@ function MainPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortBy, setSortBy] = useState('search_frequency')
   const [refreshKey, setRefreshKey] = useState(0)
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false)
 
   const handleCategoryToggle = (categoryName) => {
     const newCategories = new Set(selectedCategories)
@@ -32,9 +33,19 @@ function MainPage() {
     setRefreshKey((prev) => prev + 1)
   }
 
+  const handleContactClick = () => {
+    setIsInquiryOpen(true)
+  }
+  
+  const handleInquiryClose = () => {
+    setIsInquiryOpen(false)
+  }
+
   return (
     <div className="main-page">
-      <Header onRefresh={handleRefresh} />
+      <Header 
+      onRefresh={handleRefresh} 
+      onContact={handleContactClick}/>
 
       <div className="container">
         <LeftPanel

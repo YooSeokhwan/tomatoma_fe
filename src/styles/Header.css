@@ -83,6 +83,39 @@
   background-color: var(--bg-light);
 }
 
+/* Phase 1.9 — 인증 상태 표시 */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-user {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 0 8px;
+  font-weight: 500;
+}
+
+.btn-text {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #d2492c;
+  color: #ffffff;
+  border-color: #d2492c;
+}
+
+.btn-primary:hover {
+  background-color: #b73d24;
+  color: #ffffff;
+}
+
 @media (max-width: 767px) {
   .header {
     height: 50px;

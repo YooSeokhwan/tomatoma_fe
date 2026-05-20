@@ -50,9 +50,13 @@ function Header({ onRefresh }) {
 
           {isAuthenticated ? (
             <>
-              <span className="header-user" title={`로그인: ${user?.userId}`}>
+              <Link
+                to="/me"
+                className="header-user-link"
+                title="마이페이지로"
+              >
                 {user?.userId}
-              </span>
+              </Link>
               <button
                 className="btn btn-text"
                 onClick={handleLogout}

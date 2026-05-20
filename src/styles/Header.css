@@ -99,6 +99,31 @@
   font-weight: 500;
 }
 
+.header-user-link {
+  font-size: 13px;
+  color: #d2492c;
+  padding: 6px 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 16px;
+  background: #fff5ef;
+  border: 1px solid #ffd0b8;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-user-link:hover {
+  background: #ffe4d6;
+  border-color: #d2492c;
+}
+
+.header-user-link::before {
+  content: '👤';
+  margin-right: 6px;
+  font-size: 12px;
+}
+
 .btn-text {
   text-decoration: none;
   display: inline-flex;

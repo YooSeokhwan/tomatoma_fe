@@ -1,0 +1,269 @@
+/* MyPage.css — 마이페이지 스타일 */
+
+.mypage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff7ed 0%, #fef9f4 100%);
+  padding: 24px 16px 60px;
+}
+
+.mypage-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+.mypage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.mypage-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  flex: 1;
+}
+
+.mypage-back {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.mypage-back:hover {
+  background: #ffffff;
+  border-color: #d2492c;
+  color: #d2492c;
+}
+
+/* 프로필 카드 */
+.profile-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffe4d6 0%, #ffd0b8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-emoji {
+  font-size: 36px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.profile-userid {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: #777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-role {
+  margin-top: 4px;
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.role-user {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.role-admin {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.profile-id-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.profile-id-label {
+  font-size: 11px;
+  color: #999;
+}
+
+.profile-id-value {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* 액션 섹션 */
+.actions-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0 4px;
+}
+
+.action-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.action-item:hover:not(:disabled) {
+  background: #fffaf6;
+  transform: translateX(2px);
+}
+
+.action-item:disabled {
+  cursor: not-allowed;
+}
+
+.action-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #fff5ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.action-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.action-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.action-desc {
+  font-size: 12px;
+  color: #888;
+}
+
+.action-tag {
+  font-size: 10px;
+  color: #aaa;
+  background: #f5f5f5;
+  padding: 3px 8px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.action-disabled {
+  opacity: 0.55;
+}
+
+.action-danger .action-icon {
+  background: #ffebee;
+}
+
+.action-danger .action-name {
+  color: #c62828;
+}
+
+/* 로그아웃 버튼 */
+.logout-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d2492c;
+  background: #ffffff;
+  border: 1px solid #ffcdb0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.logout-button:hover {
+  background: #fff5ef;
+  border-color: #d2492c;
+}
+
+.logout-button:active {
+  transform: translateY(1px);
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .profile-card {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .profile-id-section {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+  }
+}

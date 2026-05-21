@@ -144,15 +144,46 @@
 @media (max-width: 767px) {
   .header {
     height: 50px;
-    padding: 0 12px;
+    padding: 0 10px;
   }
 
   .header h1 {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .subtitle {
-    font-size: 11px;
+    display: none;
+  }
+
+  /* 좁은 화면에서 버튼 줄이 넘치지 않도록 압축 */
+  .header-content {
+    gap: 8px;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .btn-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /* 핸들러 없는 장식용 아이콘(도움말/설정)은 모바일에서 숨겨 공간 확보 */
+  .header-actions .btn-icon[aria-label="Help"],
+  .header-actions .btn-icon[aria-label="Settings"] {
+    display: none;
+  }
+
+  /* 로그인/회원가입/사용자 칩 압축 */
+  .btn-text,
+  .header-user-link {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .header-user-link::before {
     display: none;
   }
 }

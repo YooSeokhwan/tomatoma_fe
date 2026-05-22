@@ -43,9 +43,10 @@ function RegisterPage() {
       await login(userId, password)
       navigate('/', { replace: true })
     } catch (err) {
-      const msg = err.response?.data?.message
-        || err.response?.data?.Error
-        || '회원가입 실패: 입력값을 다시 확인하세요.'
+      const raw = err.response?.data?.message || err.response?.data?.Error
+      const msg = raw
+        ? raw.replace(/^Error:\s*/, '')
+        : '회원가입 실패: 서버에 연결할 수 없습니다.'
       setError(msg)
     } finally {
       setSubmitting(false)

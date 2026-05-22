@@ -23,7 +23,8 @@ export function AuthProvider({ children }) {
   // 앱 시작 시 localStorage에 토큰이 있으면 /me로 검증
   useEffect(() => {
     const token = localStorage.getItem(TOKEN_KEY)
-    if (!token) {
+    if (!token || token === 'undefined' || token === 'null') {
+      localStorage.removeItem(TOKEN_KEY)
       setLoading(false)
       return
     }
@@ -39,6 +40,7 @@ export function AuthProvider({ children }) {
 
   const login = useCallback(async (userId, password) => {
     const data = await authService.login({ userId, password })
+    if (!data.accessToken) throw new Error('로그인 응답에 토큰이 없습니다')
     localStorage.setItem(TOKEN_KEY, data.accessToken)
     // 토큰 저장 후 /me로 전체 사용자 정보 가져오기
     const me = await authService.getCurrentUser()
